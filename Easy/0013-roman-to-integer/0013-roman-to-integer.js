@@ -12,15 +12,15 @@ var romanToInt = function(s) {
     
     let value = 0;
     for (let i = 0; i < s.length; i++) {
-        let currentLetter = s[i];
-        let nextLetter = s[i+1];
+        let currentLetter = romanNumerals[s[i]];
+        let nextLetter = romanNumerals[s[i+1]];
         
-        if (romanNumerals[currentLetter] < romanNumerals[nextLetter]) {
-            value += romanNumerals[nextLetter] - romanNumerals[currentLetter];
+        if (currentLetter < nextLetter) {
+            value += nextLetter - currentLetter;
             i++;
         }
         else {
-            value += romanNumerals[currentLetter];
+            value += currentLetter;
         }
     }
     return value;

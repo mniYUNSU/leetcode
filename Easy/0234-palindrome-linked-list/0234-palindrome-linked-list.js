@@ -17,7 +17,6 @@
 // 인자로 받은 연결 리스트와 일치한지 비교한다.
 var isPalindrome = function(head) {
     let slow = head, fast = head;
-    
     while (fast && fast.next) {
         slow = slow.next;
         fast = fast.next.next;
@@ -25,7 +24,6 @@ var isPalindrome = function(head) {
     
     // slow 를 뒤집는다. [4,3,2,1] -> [1,2,3,4]
     let prev = null, next; // 이전값, 다음값
-    
     while (slow) {
         next = slow.next; // next:[3,2,1],[2,1],[1],null
         slow.next = prev; // slow:[4],[3,4],[2,3,4],[1,2,3,4]

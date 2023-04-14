@@ -13,7 +13,7 @@ var removeDuplicates = function(nums) {
             nums[unique+1] = nums[current];
             unique++;
         }
-            current++;
+        current++;
     }
     return unique+1;
 };

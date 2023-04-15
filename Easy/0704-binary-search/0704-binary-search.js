@@ -10,9 +10,9 @@ var search = function(nums, target) {
     // 날린 배열을 다시 반으로 나눈다
     // 가운데 요소가 타겟보다 작으면 오른쪽을 나눈다
     
-    if (nums.length === 1) {
-        return nums[0] === target ? 0 : -1
-    }
+    // if (nums.length === 1) {
+    //     return nums[0] === target ? 0 : -1
+    // }
     let left = 0, right = nums.length - 1;
     let half = Math.floor(nums.length / 2);
     

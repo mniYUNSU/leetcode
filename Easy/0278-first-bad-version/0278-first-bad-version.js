@@ -28,6 +28,7 @@ var solution = function(isBadVersion) {
         while (left < right) {
             let mid = Math.floor(left + (right - left) / 2);
             if (isBadVersion(mid)) {
+                if (!isBadVersion(mid-1)) return mid;
                 right = mid;
             } else {
                 left = mid + 1;            

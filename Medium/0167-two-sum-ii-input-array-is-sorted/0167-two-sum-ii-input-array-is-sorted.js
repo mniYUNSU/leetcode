@@ -23,7 +23,6 @@ var twoSum = function(numbers, target) {
     
     // 양 끝에서 시작하는 두 포인터 사용
     let start = 0, end = numbers.length - 1;
-    
     while (start < end) {
         if (numbers[start] + numbers[end] === target) return [start + 1, end + 1];
         if (numbers[start] + numbers[end] > target) {

@@ -18,6 +18,5 @@ var reverseString = function(s) {
         }
         return s;
     }
-    
     return reverse(s);
 };

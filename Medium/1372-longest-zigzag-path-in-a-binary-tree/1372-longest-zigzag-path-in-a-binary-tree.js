@@ -43,6 +43,7 @@ var longestZigZag = function(root) {
     
     // dfs(root, 0, 'left');
     // dfs(root, 0, 'right');
+    // dfs param 초기값 설정하는 것으로 1회 호출만 해도 결과 리턴 가능
     dfs(root, 0);
     return result;
 };

@@ -20,11 +20,15 @@ var longestZigZag = function(root) {
     
     // 왼쪽 혹은 오른쪽 노드가 null 이면 탐색 종료
     // 존재한다면 그 노드의 자식 노드 탐색 , 오른쪽 노드에서 왼쪽이라면 경로 + 1, 오른쪽에서 오른쪽이면 경로 1로 초기화
-    const dfs = (currentRoot, length, direction) => {
+    const dfs = (currentRoot, length, direction = 'init') => {
         if (currentRoot === null) return;
         // 지그재그 경로의 최댓값을 저장
         result = Math.max(result, length);
-        if (direction === 'left') {
+        if (direction === 'init') {
+            dfs(currentRoot.right, 1, 'right');
+            dfs(currentRoot.left, 1, 'left');
+        }
+        else if (direction === 'left') {
             // 왼쪽에서 오른쪽으로 타므로 지그재그 경로 길이 + 1
             dfs(currentRoot.right, length + 1, 'right');
             // 지그재그 경로 길이 초기화
@@ -34,7 +38,8 @@ var longestZigZag = function(root) {
             dfs(currentRoot.right, 1, 'right');
         }
     }
-    dfs(root, 0, 'left');
-    dfs(root, 0, 'right');
+    // dfs(root, 0, 'left');
+    // dfs(root, 0, 'right');
+    dfs(root, 0);
     return result;
 };

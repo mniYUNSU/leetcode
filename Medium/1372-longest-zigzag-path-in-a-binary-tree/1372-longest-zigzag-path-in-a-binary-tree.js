@@ -24,6 +24,8 @@ var longestZigZag = function(root) {
         if (currentRoot === null) return;
         // 지그재그 경로의 최댓값을 저장
         result = Math.max(result, length);
+        
+        // 최초 root 노드일땐 길이 1로 초기화 후 왼쪽, 오른쪽 탐색 시작
         if (direction === 'init') {
             dfs(currentRoot.right, 1, 'right');
             dfs(currentRoot.left, 1, 'left');
@@ -38,6 +40,7 @@ var longestZigZag = function(root) {
             dfs(currentRoot.right, 1, 'right');
         }
     }
+    
     // dfs(root, 0, 'left');
     // dfs(root, 0, 'right');
     dfs(root, 0);

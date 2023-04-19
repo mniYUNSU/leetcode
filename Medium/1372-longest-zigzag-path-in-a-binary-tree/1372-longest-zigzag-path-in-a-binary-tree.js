@@ -17,7 +17,6 @@ var longestZigZag = function(root) {
     // 가장 큰 지그재그 경로 리턴
     
     let result = 0;
-    
     // 왼쪽 혹은 오른쪽 노드가 null 이면 탐색 종료
     // 존재한다면 그 노드의 자식 노드 탐색 , 오른쪽 노드에서 왼쪽이라면 경로 + 1, 오른쪽에서 오른쪽이면 경로 1로 초기화
     const dfs = (currentRoot, length, direction) => {

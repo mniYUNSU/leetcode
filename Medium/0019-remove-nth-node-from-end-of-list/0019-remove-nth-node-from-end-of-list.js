@@ -19,9 +19,7 @@ var removeNthFromEnd = function(head, n) {
     // slow 포인터는 노드에서 마지막에서 n + 1 번째 만큼 이동해있다. (더미노드가 추가되어있으므로)
     // 즉 fast 와 slow 간 거리가 n + 1만큼 벌어져 있다.
     // slow.next 자리에 slow.next.next 를 할당한다. 즉, 뒤에서 n 번째 노드를 없엔다.
-    
-    let dummy = new ListNode(0);
-    dummy.next = head;
+    let dummy = new ListNode(0, head);
     let slow = dummy; // [0,1,2,3,4,5]
     let fast = head;  // [1,2,3,4,5]
     

@@ -35,6 +35,5 @@ var longestZigZag = function(root) {
     }
     dfs(root, 0, 'left');
     dfs(root, 0, 'right');
-    
     return result;
 };

@@ -33,8 +33,7 @@ var removeNthFromEnd = function(head, n) {
         slow = slow.next;
     }
     // fast : null
-    // slow : [3,4,5]
-    // slow : [3,5]
+    // slow : [3,4,5] -> [3,5]
     // dummy : [0,1,2,3,5]
     slow.next = slow.next.next;
     return dummy.next;

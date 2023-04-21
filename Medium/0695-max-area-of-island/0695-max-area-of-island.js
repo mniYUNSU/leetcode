@@ -25,7 +25,6 @@ var maxAreaOfIsland = function(grid) {
         recur(row, column+1);
     }
     
-    
     for(let i = 0; i < rowLength; i++) {
         for (let j = 0; j < columnLength; j++) {
             if (grid[i][j] === 0) continue; 

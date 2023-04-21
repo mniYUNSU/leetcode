@@ -7,13 +7,14 @@ var maxAreaOfIsland = function(grid) {
     // 가장 큰 land 의 크기 리턴
     
     // 상하좌우가 1인지 판단하여 1이면 땅 크기를 + 1 하는 재귀함수 만든다.
-    // 재귀 종료 조건 - 현재 좌표 값이 0 인 경우, 좌표값이 -1이거나 땅 크기를 초과할 때, 이미 판단한 좌표인 경우
+    // 재귀 종료 조건 - 현재 좌표 값이 0이거나 이미 방문한 경우, 좌표값이 -1이거나 땅 크기를 초과할 때
     let rowLength = grid.length, columnLength = grid[0].length;
     let result = 0, currentArea = 0;
     
     const recur = (row, column) => {
         if (row < 0 || column < 0) return;
         if (row >= rowLength || column >= columnLength) return;
+        // 1이 아닌 경우 : 0이거나, 이미 방문했거나
         if (grid[row][column] !== 1) return;
         
         // 이미 판단한 좌표임을 기억하기 위해 2로 변경

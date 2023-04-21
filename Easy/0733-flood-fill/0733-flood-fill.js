@@ -37,6 +37,5 @@ var floodFill = function(image, sr, sc, color) {
     }
     
     recur(sr,sc);
-    console.log(image)
     return image;
 };

@@ -16,7 +16,6 @@ var orangesRotting = function(grid) {
     
     // 동떨어진 신선한 오렌지가 있다면 -1을 리턴해야한다. 신선한 오렌지의 좌표도 기억해둔다.
     
-    const directions = [[-1,0], [1,0], [0,-1], [0,1]];
     let minute = 0;
     let rotten = [], fresh = 0;
     const row = grid.length, col = grid[0].length;

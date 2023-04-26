@@ -22,7 +22,6 @@ var reverseList = function(head) {
         // 다음 값을 가리킬 포인터
         // null -> 1 -> 2 -> 3
         let next = current.next;
-        
         // 현재 위치의 next가 가리킬 위치는 prev가 된다.
         // null <- 1 - 2 -> 3
         current.next = prev;
@@ -35,6 +34,5 @@ var reverseList = function(head) {
         // 그 때 prev는 current 보다 1만큼 뒤의 리스트가 된다.
         // 즉 반복이 종료됐을 때 prev 는 null <- 1 <- 2 <- 3 이 된다.
     }
-    
     return prev;
 };

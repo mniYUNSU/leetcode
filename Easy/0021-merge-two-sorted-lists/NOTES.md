@@ -1,1 +1,1 @@
-​
+https://leetcode.com/problems/merge-two-sorted-lists/discuss/9963/Simple-javascript-solution

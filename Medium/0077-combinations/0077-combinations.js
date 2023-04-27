@@ -5,7 +5,6 @@
  */
 var combine = function(n, k) {
     // 1부터 n 까지의 수로 만들 수 있는 k 갯수 리턴
-    // nCk
     
     // 중복허용 안됨
     // 4C2 = (4*3)/(2*1)
@@ -16,7 +15,6 @@ var combine = function(n, k) {
     // 조합 배열의 길이가 k 가 된다면 결과로 리턴할 배열에 푸시하고 재귀를 마친다.
     
     let combinations = [];
-    
     
     const recur = (index, array) => {
         if (array.length === k)  {
@@ -30,14 +28,9 @@ var combine = function(n, k) {
             recur(i+1, array);
             array.pop();
         }
+        return
     }
     
     recur(1,[]);
     return combinations;
-    
-    
-    
-    
-    
-    
 };

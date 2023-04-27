@@ -18,7 +18,6 @@ var combine = function(n, k) {
     
     const recur = (index, array) => {
         if (array.length === k)  {
-            console.log(array)
             combinations.push([...array]);
             return;
         }

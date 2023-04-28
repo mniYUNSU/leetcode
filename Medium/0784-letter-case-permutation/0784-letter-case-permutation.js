@@ -19,14 +19,17 @@ var letterCasePermutation = function(s) {
             return
         }
         
+        // 숫자일때
         if(!isNaN(s[index])) {
             permutation(index+1, string+s[index]);
             return;
         }
+        // 대문자일때
         else if (s[index] === s[index].toUpperCase()) {
             permutation(index+1, string+s[index]);
             permutation(index+1, string+s[index].toLowerCase());
         }
+        // 소문자일때
         else if (s[index] === s[index].toLowerCase()) {
             permutation(index+1, string+s[index]);
             permutation(index+1, string+s[index].toUpperCase());

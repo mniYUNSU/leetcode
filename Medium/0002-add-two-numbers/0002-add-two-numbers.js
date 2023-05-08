@@ -16,6 +16,7 @@ var addTwoNumbers = function(l1, l2) {
     
     let list = new ListNode(0);
     let pointer = list, sum = 0, overTen = 0;
+    
     // l1 이나 l2 가 남지 않을 때 까지 반복한다.
     // 마지막까지 덧셈을 마쳤는데, 마지막 덧셈이 10을 넘어가는 경우엔 next 에 1을 추가해야한다.
     // 즉 sum 이 0 보다 크다면 이전 덧셈에서 10을 넘어갔다는 뜻이 되므로 이 조건도 루프 조건에 포함해야 한다.

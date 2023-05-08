@@ -38,7 +38,6 @@ var addTwoNumbers = function(l1, l2) {
         pointer = pointer.next;
         // 더한 값이 10 이상이면 sum 은 +1 한 값을 시작으로 더해야 한다.
         sum = overTen;
-        // 할당이 모두 끝나면 초기화한다.
         overTen = 0;
     }
     return list.next;

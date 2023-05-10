@@ -13,7 +13,7 @@ var generateParenthesis = function(n) {
     return result;
 }; 
 
-const recur = function(currentWord, leftCount, rightCount, n, result) { 
+const recur = function (currentWord, leftCount, rightCount, n, result) { 
     if (currentWord.length === n*2) {
         result.push(currentWord);
         return;

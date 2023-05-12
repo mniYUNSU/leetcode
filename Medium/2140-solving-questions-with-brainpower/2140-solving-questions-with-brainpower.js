@@ -11,13 +11,21 @@ var mostPoints = function(questions) {
     // 각 인덱스에서 계산했던 값들 메모
     // 베이스 케이스는 마지막 문제로 출발한다.
     // 배열의 끝부터 출발하여 풀었을때, 스킵했을때 각각 경우의 최대값을 저장한다.
-    // [[1,1],[2,2],[3,3],[4,4],[5,5]]
+    
+    // zero-one knapsack DP
     let dp = {};
     
     for (let i = questions.length - 1; i >= 0; i--) {
         let solve = questions[i][0] + (dp[i+1+questions[i][1]] || 0);
         let skip = dp[i+1] || 0;
         dp[i] = Math.max(solve, skip);
+        
+        // [[1,1],[2,2],[3,3],[4,4],[5,5]]
+        // [ , , , , 5]
+        // [ , , , 5, 5]
+        // [ , , 5, 5, 5]
+        // [ , 7, 5, 5, 5]
+        // [7, 7, 5, 5, 5]
     }
     
     return dp[0];    

@@ -10,7 +10,6 @@
  * @return {ListNode}
  */
 var swapPairs = function(head) {
-    // 인접한 두 노드를 스위칭 한 리스트 리턴
     // 2씩 이동하는 포인터 생성
     // 현재 위치와 다음 위치의 밸류를 바꾼다.
     // 2씩 이동한다.

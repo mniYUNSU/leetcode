@@ -17,7 +17,7 @@ var swapPairs = function(head) {
     while (pointer !== null) {
         console.log(pointer)
         let memo = pointer.val;
-    if (pointer === null || pointer.next === null) return head;
+        if (pointer === null || pointer.next === null) return head;
         pointer.val = pointer.next.val;
         pointer.next.val = memo;
         

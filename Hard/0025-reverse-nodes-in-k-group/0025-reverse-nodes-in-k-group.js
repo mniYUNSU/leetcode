@@ -37,7 +37,6 @@ var reverseKGroup = function(head, k) {
     return head;
 };
 
-
 const reverseList = function(head, node, count) {
     // 현재 노드의 다음 노드를 임시 변수 temp에 저장
     // 현재 노드의 다음 노드를 이전 노드(node)로 변경

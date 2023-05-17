@@ -22,11 +22,11 @@ var pairSum = function(head) {
     
     // 리스트를 반으로 나누려면 left를 1씩, right를 2씩 이동한다.
     // right가 끝에 닿으면 left는 절반만큼 왔으므로, left.next는 right가 된다.
-    // right를 구했으면 left를 다시 head 로 초기화시킨다.
     while (right.next.next) {
         left = left.next;
         right = right.next.next;
     }
+    // right 를 뒤집고 left를 head로 초기화시킨다.
     right = reverseList(left.next);
     left = head;
     

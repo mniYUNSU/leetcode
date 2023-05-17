@@ -17,7 +17,6 @@ var pairSum = function(head) {
     // left와 right의 val 을 더해 최대값이라면 결과 변수에 할당한다.
     // 다음 위치로 이동한다.
     
-    
     let result = 0;
     let left = head, right = head;
     
@@ -37,10 +36,7 @@ var pairSum = function(head) {
         left = left.next;
         right = right.next;
     }
-    
     return result;
-    
-    
 };
 
 const reverseList = function (head) {

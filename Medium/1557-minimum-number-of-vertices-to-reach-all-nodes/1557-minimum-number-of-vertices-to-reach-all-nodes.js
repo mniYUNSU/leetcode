@@ -25,7 +25,7 @@ var findSmallestSetOfVertices = function(n, edges) {
     
     vertices.forEach((vertex, index) => {
         vertex === 0 && result.push(index);
-    })
+    });
 
     return result;
 };

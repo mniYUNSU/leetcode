@@ -16,26 +16,26 @@ var isBipartite = function(graph) {
             queue.push(i);
         }
     }
-    // console.log(queue)
+
     // queue 를 소진할 때 까지 루프를 돈다.
     while (queue.length > 0) {
         let current = queue.shift();
         let connected = graph[current];
         
         for (let node of connected) {
-            // 방문한 적이 없는 노드라면 방문했음을 기록한다.
+            // 방문한 적이 없는 노드라면 방문했음을 기록함과 동시에
+            // 현재 노드와 다른 그룹에 넣는다. 1 or 0
             // 다음 큐에 넣는다.
             if (visited[node] === -1) {
                 visited[node] = 1 - visited[current];
                 queue.push(node);
             }
             // 방문한적이 있고, 현재 노드와 같은 값이라면
-            // 서로 인접하고 두 그룹으로 나눌 수 없는 노드이므로 false
+            // 같은 그룹이므로 false
             else if (visited[node] === visited[current]) {
                 return false;
             }
         }
     }
-    console.log(visited)
     return true;
 };

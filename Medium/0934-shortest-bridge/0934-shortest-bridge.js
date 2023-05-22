@@ -43,13 +43,13 @@ const getMinimumValue = function (firstIsland, secondIsland) {
     // j 인덱스 끼리 뺀 값의 절대값 - 가로 방향으로 얼마나 떨어져 있는지
     // 두 값을 더하고 1을 뺀다. 1을 빼는 이유는 섬을 포함해버리기 때문.
     
+    let value = Infinity;
     let outerArray = secondIsland, innerArray = firstIsland;
     if (firstIsland.length > secondIsland.length) {
         outerArray = firstIsland;
         innerArray = secondIsland;
     }
     
-    let value = Infinity;
     for (let i = 0; i < outerArray.length; i++) {
         for (let j = 0; j < innerArray.length; j++) {
             let distance = Math.abs(outerArray[i][0] - innerArray[j][0]) + Math.abs(outerArray[i][1] - innerArray[j][1]) - 1;

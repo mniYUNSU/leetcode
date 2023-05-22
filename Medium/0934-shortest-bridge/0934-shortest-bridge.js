@@ -10,7 +10,6 @@ var shortestBridge = function(grid) {
     // 섬이라면 푸시한다.
     for (let i = 0; i < grid.length; i++) {
         for (let j = 0; j < grid[0].length; j++) {
-            // 첫번째 섬을 만든 후 두번째 섬을 만든다.
             if (grid[i][j] === 1) {
                 if (firstIsland.length === 0) {
                     dfs(i, j, firstIsland, grid);

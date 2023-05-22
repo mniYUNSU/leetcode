@@ -56,5 +56,6 @@ const getMinimumValue = function (firstIsland, secondIsland) {
             value = Math.min(value, distance);
         }
     }
+    
     return value;
 };

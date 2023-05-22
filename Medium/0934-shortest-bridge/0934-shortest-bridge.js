@@ -3,7 +3,6 @@
  * @return {number}
  */
 var shortestBridge = function(grid) {
-    // grid는 2개의 섬을 갖고있다.
     // 2개의 섬을 나타낼 배열을 만든다.
     let firstIsland = [], secondIsland = [];
     

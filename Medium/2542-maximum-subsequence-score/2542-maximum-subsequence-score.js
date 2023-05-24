@@ -13,7 +13,7 @@ var maxScore = function(nums1, nums2, k) {
         pairs.push([nums1[i], nums2[i]]);
     }
     pairs.sort((a,b) => b[1] - a[1]);
-    console.log(pairs);
+
     // minHeap 사용
     let heap = new MinPriorityQueue();
     let sum = 0;
@@ -21,9 +21,7 @@ var maxScore = function(nums1, nums2, k) {
         heap.enqueue(pairs[i][0], pairs[i][0]);
         sum += pairs[i][0];
     }
-    
-    console.log(heap, sum);
-    
+        
     let answer = sum * pairs[k-1][1];
     for (let i = k; i < nums1.length; i++) {
         sum -= heap.dequeue().element;
@@ -32,6 +30,5 @@ var maxScore = function(nums1, nums2, k) {
         
         answer = Math.max(answer, sum * pairs[i][1]);
     }
-    console.log(pairs);
     return answer;
 };

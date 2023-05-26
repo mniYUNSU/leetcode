@@ -26,6 +26,8 @@ var stoneGameII = function(piles) {
         let result = 0;
         
         for (let i = 1; i <= 2*M; i++) {
+            // 앨리스가 하나 가져가면 M 은 Max(1,1)
+            // 앨리스가 두개 가져가면 M 은 Max(1,2)
             const newM = Math.max(i,M);
             result = Math.max(result, sums[index] - minMax(index + i, newM));
         }

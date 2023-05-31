@@ -44,11 +44,6 @@ UndergroundSystem.prototype.checkOut = function(id, stationName, t) {
 UndergroundSystem.prototype.getAverageTime = function(startStation, endStation) {
     const checkedOutTravel = Object.values(this[startStation]).filter(travel => travel.checkOut === endStation);
     const travelTime = checkedOutTravel.reduce((a,b) => a + b.time ,0);
-    // for (let i = 0; i < this[startStation].length; i++) {
-    //     if (this[startStation][i].checkOut === endStation) {
-    //         this[startStation].splice(i,1);
-    //     }
-    // };
     return (travelTime / checkedOutTravel.length).toFixed(5);
 };
 

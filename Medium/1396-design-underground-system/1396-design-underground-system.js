@@ -11,11 +11,6 @@ var UndergroundSystem = function() {
  */
 UndergroundSystem.prototype.checkIn = function(id, stationName, t) {
     if (!this[stationName]) this[stationName] = [];
-    const updateId = Object.values(this[stationName]).map(travel => {
-        if (travel.id) {
-            travel
-        } 
-    });
     this[stationName].push({ id, time: t, checkOut: null });
 };
 

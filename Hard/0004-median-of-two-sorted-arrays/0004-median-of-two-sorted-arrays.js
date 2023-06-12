@@ -12,8 +12,8 @@ var findMedianSortedArrays = function(nums1, nums2) {
    
     if (nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
     
-    let total = nums1.length + nums2.length;
-    let half = Math.floor(total / 2);
+    const total = nums1.length + nums2.length;
+    const half = Math.floor(total / 2);
     
     let left = 0, right = nums1.length;
     
@@ -21,10 +21,10 @@ var findMedianSortedArrays = function(nums1, nums2) {
         i = Math.floor((left + right) / 2);
         j = half - i;
         
-        let left1 = i > 0 ? nums1[i-1] : -Infinity
-        let right1 = i < nums1.length ? nums1[i] : Infinity;
-        let left2 = j > 0 ? nums2[j-1] : -Infinity;
-        let right2 = j < nums2.length ? nums2[j] : Infinity;
+        const left1 = i > 0 ? nums1[i-1] : -Infinity
+        const right1 = i < nums1.length ? nums1[i] : Infinity;
+        const left2 = j > 0 ? nums2[j-1] : -Infinity;
+        const right2 = j < nums2.length ? nums2[j] : Infinity;
         
         if (left1 <= right2 && left2 <= right1) {
             if (total % 2 !== 0) {

@@ -25,9 +25,10 @@ var longestPalindrome = function(s) {
     };
 
     for (let i = 0; i < s.length; i++) { 
-        // 기준 문자의 옆에 같은 문자가 없을 경우
+        // 하나의 기준 문자로 회문판단
         findLongestPalindrome(i, i); 
-        // 기준 문자 옆에 같은 문자가 존재할 때, 기준 문자를 두 문자로 묶어 회문 판단 시작
+        // 기준 문자 옆에 같은 문자가 존재할 경우가 있음
+        // 기준 문자를 두 문자로 묶어 회문 판단 시작
         findLongestPalindrome(i, i + 1);
     };
 

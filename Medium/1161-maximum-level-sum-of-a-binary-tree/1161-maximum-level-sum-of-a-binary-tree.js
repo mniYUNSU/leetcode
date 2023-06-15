@@ -33,6 +33,7 @@ var maxLevelSum = function(root) {
             if (node.left) queue.push(node.left);
             if (node.right) queue.push(node.right);
         }
+        
         // 저장된 최대값보다 크면 최대값 업데이트, 현재 레벨을 저장
         if (currentSum > maxLevelSum) {
             maxLevelSum = currentSum;

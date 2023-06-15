@@ -12,7 +12,6 @@
  */
 var maxLevelSum = function(root) {
     // 같은 레벨에 있는 노드 총합이 가장 큰 레벨 리턴
-    
     let maxLevelSum = Number.MIN_SAFE_INTEGER, maxLevel = 1;
     let queue = [root], level = 1;
     

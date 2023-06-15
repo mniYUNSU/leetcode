@@ -19,10 +19,12 @@ var maxLevelSum = function(root) {
     
     let maxLevelSum = Number.MIN_SAFE_INTEGER, maxLevel = 1;
     let queue = [root], level = 1;
+    
     // 레벨을 기준으로 반복
     while (queue.length) {
         let currentSum = 0;
         let size = queue.length;
+        
         // 레벨에 노드가 존재할 때, 그 노드들의 값들을 누적
         // 노드의 left, right 는 다음 레벨이 되므로 큐에 넣는다
         for (let i = 0; i < size; i++) {

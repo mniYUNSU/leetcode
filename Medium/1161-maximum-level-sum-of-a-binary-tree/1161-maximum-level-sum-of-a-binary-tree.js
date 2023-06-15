@@ -17,7 +17,6 @@ var maxLevelSum = function(root) {
     // 큐에서 뺀 노드의 left 와 right를 큐에 넣는다.
     // 큐가 빌 때 더해진 누적 값을 저장해두고, 누적값이 업데이트될 때마다 대소비교한다.
     
-    
     let maxLevelSum = Number.MIN_SAFE_INTEGER, maxLevel = 1;
     let queue = [root], level = 1;
     

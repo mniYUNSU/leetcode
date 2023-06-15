@@ -15,7 +15,6 @@ var maxLevelSum = function(root) {
     let maxLevelSum = Number.MIN_SAFE_INTEGER, maxLevel = 1;
     let queue = [root], level = 1;
     
-    // 레벨을 기준으로 반복
     while (queue.length) {
         let currentSum = 0;
         let size = queue.length;

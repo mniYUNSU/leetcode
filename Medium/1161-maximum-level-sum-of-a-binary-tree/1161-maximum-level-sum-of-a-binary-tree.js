@@ -16,20 +16,22 @@ var maxLevelSum = function(root) {
     // 큐에서 하나씩 빼며 그 노드 값을 누적한다.
     // 큐에서 뺀 노드의 left 와 right를 큐에 넣는다.
     // 큐가 빌 때 더해진 누적 값을 저장해두고, 누적값이 업데이트될 때마다 대소비교한다.
+    
     let maxLevelSum = Number.MIN_SAFE_INTEGER, maxLevel = 1;
     let queue = [root], level = 1;
-    
+    // 레벨을 기준으로 반복
     while (queue.length) {
         let currentSum = 0;
         let size = queue.length;
-        
+        // 레벨에 노드가 존재할 때, 그 노드들의 값들을 누적
+        // 노드의 left, right 는 다음 레벨이 되므로 큐에 넣는다
         for (let i = 0; i < size; i++) {
             let node = queue.shift();
             currentSum += node.val;
             if (node.left) queue.push(node.left);
             if (node.right) queue.push(node.right);
         }
-        
+        // 저장된 최대값보다 크면 최대값 업데이트, 현재 레벨을 저장
         if (currentSum > maxLevelSum) {
             maxLevelSum = currentSum;
             maxLevel = level;

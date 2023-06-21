@@ -25,8 +25,8 @@ var exist = function(board, word) {
             const j = y + dy;
             if (i >= 0 && i < height && j >= 0 && j < width) {
                 if (verif(i, j, k + 1)) return true;
-            }
-        }
+            };
+        };
         // 상하좌우 판단 후, 방문기록한 값 초기화
         board[x][y] = word[k];
         // 기본값은 false 리턴

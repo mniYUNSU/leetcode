@@ -39,7 +39,5 @@ var maxDepth = function(root) {
     // 재귀 종료 조건
     if (!root) return null;
     let max = Math.max(maxDepth(root.left), maxDepth(root.right));
-
-    console.log(max);
     return max + 1;
 };

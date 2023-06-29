@@ -13,7 +13,6 @@ var searchRange = function(nums, target) {
     let result = [-1, -1];
     let left = 0, right = nums.length - 1;
     
-    
     while (left < right) {
         // 중간 인덱스를 찾는다.
         let mid = Math.floor((left + right) / 2);
@@ -53,6 +52,4 @@ var searchRange = function(nums, target) {
     let end = nums[left] === target ? left : left - 1;
     
     return [start, end]; 
-    
-    
 };

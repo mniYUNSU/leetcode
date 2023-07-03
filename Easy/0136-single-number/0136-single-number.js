@@ -8,7 +8,6 @@ var singleNumber = function(nums) {
     // 배열 전체 순회
     for (let idx = 0; idx < nums.length; idx++) {
         // ^ : 서로 값이 같으면 0 리턴
-        console.log(uniqNum,nums[idx])
         uniqNum = uniqNum ^ nums[idx];
     } 
     return uniqNum;       

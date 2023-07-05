@@ -23,6 +23,8 @@ var longestSubarray = function(nums) {
             left++;
         }
     }
+    
+    console.log(nums.length)
 
     return maxLength === nums.length ? maxLength - 1 : maxLength;
 };

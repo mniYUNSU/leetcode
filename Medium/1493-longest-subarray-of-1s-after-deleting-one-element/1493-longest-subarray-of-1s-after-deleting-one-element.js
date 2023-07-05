@@ -24,7 +24,5 @@ var longestSubarray = function(nums) {
         }
     }
     
-    console.log(nums.length)
-
     return maxLength === nums.length ? maxLength - 1 : maxLength;
 };
